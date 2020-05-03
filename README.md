@@ -14,20 +14,27 @@
 ## Introduction  
 ### What is Q-Learning  
 &nbsp;&nbsp;Q-Learning is a value-based Reinforcement Learning algorithm that deals with the problem of learning to control autonomous agents. The learning process works based on interactions by trial and error with a dynamic environment which provides reward signals for each action the agent executes.  
-![image2](/images/images/procedure.jpg | width=300)
+\
+<img src="/images/procedure.jpg" width="300"></img>
+\
 ### A Simple Example on Q-Learning  
-![image3](/images/images/simpleMaze.png | width=300)
+\
+<img src="/images/simpleMaze.png" width="300"></img>
+\
 Here is a 2x3 maze, with a little rat at the starting point, and its goal is to get to the biggest pile of cheese without being poisoned.  
 **ways to solve this problem**  
 - Brute Force: Time-consuming, not feasible for large size of maze.   
 - Randomly Selection: Randomly select a direction to go at each point. Easily stucked into a infinate loop.  
 - Q-learning: Train a model to make a best choice at each step.  
 \
-![image4](/images/Q-Table.png | width=400)  
+<img src="/images/Q-Table.png" width="400"></img>
+\ 
 Here is the Q-Table for this maze. We first initialize it with all zeros. At the starting point, which is state zero, if the rat choose to move right, now what the algorithm does is update the q-value of this state and action. But how?   
 
 ### Update Function  
-![image5](/images/equation.png | width=600)
+\
+<img src="/images/equation.png" width="600"></img>
+\
 Here is the Bellman equation we use to update Q-Table.
 - s: Sate.  
 - a: Action.  
