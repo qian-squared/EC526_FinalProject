@@ -8,7 +8,7 @@
 ### How to run code
 - On SCC, excute command ``load module openmpi``.
 - Run Makefile and makeMaze to get all excutables.
-- First excutes ``makeMaze``, then run ``q-learning`` and ``findSolution``.
+- First excutes ``makeMaze``, then run ``submit_qlearning_mpi.sh`` to submit ``q-learning`` using 4 processors. Run ``get_result.sh`` to combine the result and ``findSolution`` to get the optimized path.
 - Because the libary we are using in python is not pre-installed on SCC, so ``solution.txt`` and ``maze.txt`` are needed to be download to local, and put under the same directory as ``draw.py``.
 - Run ``draw.py`` to get a visualized result.
 ## Introduction  
