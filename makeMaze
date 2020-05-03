@@ -1,0 +1,43 @@
+.SUFFIXES:
+.SUFFIXES: .o .cpp
+#============================================================
+
+TARGET1 = generateMaze
+C_OBJS1 = generateMaze.o
+
+TARGET1 = findSolution
+C_OBJS1 = findSolution.o
+
+C_SOURCES =  
+MY_INCLUDES = 
+
+ALL_SOURCES = Makefile $(C_SOURCES) $(MY_INCLUDES)
+
+CCX = g++
+CXXFLAGS = -std=c++11 
+#-std=c++11
+
+#============================================================
+all: $(TARGET1) $(TARGET2)  $(TARGET3) $(TARGET4)
+
+.o:.cpp	$(MY_INCLUDES)
+	$(CCX)  -c  $(CXXFLAGS) $<  
+
+$(TARGET1) :   $(C_OBJS1)
+	$(CCX) $(CXXFLAGS)  $^ $(LIBDIRS)  -o $@
+
+$(TARGET1) :   $(C_OBJS1)
+	$(CCX) $(CXXFLAGS)  $^ $(LIBDIRS)  -o $@
+
+# Implicit rules: $@ = target name, $< = first prerequisite name, $^ = name of all prerequisites
+#============================================================
+
+
+clean:
+	rm -f $(TARGET1) $(TARGET2) $(TARGET3) $(TARGET4) $(C_OBJS1) $(C_OBJS2) $(C_OBJS3) $(C_OBJS4)  *~
+
+tar: $(ALL_SOURCES)
+	tar cvf HW5_code.tar $(ALL_SOURCES)
+
+
+
