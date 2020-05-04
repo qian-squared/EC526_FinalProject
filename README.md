@@ -56,11 +56,9 @@ A we discussed above, Q-leaning uses episodes to train the Q-table. So for each 
 The results we obtained are satisfying. As we can see in the figure below, using 1000 episodes, our algorithm successfully solved the 4x4 and the 8x8 maze. The solution path we obtained did avoid all the obstacles and found the shortest path with max award from an arbitrary starting point to the end point. 
 
 
-<img src="/images/result1.PNG" width="300"></img>  
-<img src="/images/result2.PNG" width="300"></img>  
+<img src="/images/result1.PNG" width="300" title="maze"></img>   <img src="/images/result2.PNG" width="300" title="Q-Table"></img>  
 
-
-- - no reward
+- \- no reward
 - o  small reward
 - x  trap
 - V end of maze
