@@ -46,7 +46,7 @@ Here is the Bellman equation we use to update Q-Table.
 - gamma: Decay rate (future reward discount) parameter.  
   
 ## Parallelization  
-We used OpenMPI to parallel the Q-table. Here is an example showing a 8 x 3 maze. There are 24 states in total. If we are using 4 processors, each maze will be divided into 4 sections and each section will have 6 states in total. The corresponding Q-table is also shown. Taking the red section as an example, besides the Q_table of the states (6 to 11) in this section, two buffers are used: the top buffer and the bottom buffer. The top buffer stores the Q-table information of the row above this section (e.g. state 3 to 5) and the bottom buffer stores that below the section (e.g. state 12 to 14).  
+We used OpenMPI to parallel the Q-table. Here is an example showing a 8 x 3 maze. There are 24 states in total. If we are using 4 processors, each maze will be divided into 4 sections and each section will have 6 states in total. The corresponding Q-table is also shown on the right. Taking the red section as an example, besides the Q_table of the states (6 to 11) in this section, two buffers are used: the top buffer and the bottom buffer. The top buffer stores the Q-table information of the row above this section (e.g. state 3 to 5) and the bottom buffer stores that below the section (e.g. state 12 to 14).  
 
 <img src="/images/example_maze.PNG" width="200"></img> <img src="/images/example_qtable.PNG" width="300"></img>  
 
@@ -56,7 +56,7 @@ A we discussed above, Q-leaning uses episodes to train the Q-table. So for each 
 The results we obtained are satisfying. As we can see in the figure below, using 1000 episodes, our algorithm successfully solved the 4x4 and the 8x8 maze. The solution path we obtained did avoid all the obstacles and found the shortest path with max award from an arbitrary starting point to the end point. 
 
 
-<img src="/images/result1.PNG" width="300" title="maze"></img>   <img src="/images/result2.PNG" width="300" title="Q-Table"></img>  
+<img src="/images/result1.PNG" width="300" title="maze"></img>    <img src="/images/result2.PNG" width="300" title="Q-Table"></img>  
 
 - \- no reward
 - o  small reward
