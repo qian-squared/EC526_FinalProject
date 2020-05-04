@@ -57,7 +57,8 @@ The results we obtained are satisfying. As we can see in the figure below, using
 
 
 <img src="/images/result1.PNG" width="400" title="maze"></img>
-<img src="/images/result2.PNG" width="500" title="Q-Table"></img>  
+
+<img src="/images/result2.PNG" width="400" title="Q-Table"></img>  
 
 - \- no reward
 - o  small reward
