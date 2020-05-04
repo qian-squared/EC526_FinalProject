@@ -44,5 +44,6 @@ Here is the Bellman equation we use to update Q-Table.
   
 ## Parallelization  
 ## Results  
+## Conclusion  
 ## References
 [Q-Learning](https://www.freecodecamp.org/news/diving-deeper-into-reinforcement-learning-with-q-learning-c18d0db58efe/)
